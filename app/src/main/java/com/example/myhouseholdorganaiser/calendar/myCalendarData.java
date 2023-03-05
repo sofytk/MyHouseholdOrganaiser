@@ -1,4 +1,4 @@
-package com.example.myhouseholdorganaiser;
+package com.example.myhouseholdorganaiser.calendar;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

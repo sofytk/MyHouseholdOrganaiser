@@ -1,4 +1,4 @@
-package com.example.myhouseholdorganaiser;
+package com.example.myhouseholdorganaiser.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,18 +8,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.DatePicker;
-import android.widget.Toast;
 
-import com.example.myhouseholdorganaiser.databinding.ActivityMainBinding;
+import com.example.myhouseholdorganaiser.R;
 import com.example.myhouseholdorganaiser.databinding.ActivityNewTaskBinding;
+import com.example.myhouseholdorganaiser.task.MyTask;
 
-import java.io.Serializable;
 import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-public class NewTask extends AppCompatActivity implements DatePickerDialog.OnDateSetListener {
+public class NewTaskActivity extends AppCompatActivity implements DatePickerDialog.OnDateSetListener {
     ActivityNewTaskBinding binding;
     public static final List<MyTask> tasksList = new ArrayList<>();
     private MyTask task;
@@ -61,8 +60,8 @@ public class NewTask extends AppCompatActivity implements DatePickerDialog.OnDat
         public void onClick(View v) {
             switch (v.getId()) {
                 case R.id.currentDate:
-                    com.example.myhouseholdorganaiser.DatePicker mDatePickerDialogFragment;
-                    mDatePickerDialogFragment = new com.example.myhouseholdorganaiser.DatePicker();
+                    com.example.myhouseholdorganaiser.calendar.DatePicker mDatePickerDialogFragment;
+                    mDatePickerDialogFragment = new com.example.myhouseholdorganaiser.calendar.DatePicker();
                     mDatePickerDialogFragment.show(getSupportFragmentManager(), "DATE PICK");
                     break;
                 case R.id.new_task_button:
@@ -71,7 +70,7 @@ public class NewTask extends AppCompatActivity implements DatePickerDialog.OnDat
                 case R.id.save:
                     task = new MyTask(binding.newTaskName.getText().toString(), binding.dateOfTask.getText().toString());
                     tasksList.add(task);
-                    Intent intent = new Intent(NewTask.this, MainActivity.class);
+                    Intent intent = new Intent(NewTaskActivity.this, MainActivity.class);
                     intent.putExtra("newTask", task);
                     startActivity(intent);
                     break;

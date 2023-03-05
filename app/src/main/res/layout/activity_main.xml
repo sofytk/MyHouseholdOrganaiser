@@ -4,13 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".activities.MainActivity">
 
     <RelativeLayout
         android:id="@+id/parentRelative"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="#A1448AFF"
+        android:background="@drawable/any_style"
+        android:backgroundTint="#806190EA"
+        android:layout_margin="10dp"
         android:orientation="horizontal">
 
         <com.google.android.material.imageview.ShapeableImageView
@@ -19,7 +21,7 @@
             android:layout_height="60dp"
             android:layout_margin="10dp"
             android:scaleType="centerCrop"
-            android:src="@mipmap/ic_launcher_round"
+            android:src="@drawable/mum_img"
             app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Full" />
 
         <TextView
@@ -28,7 +30,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:layout_toRightOf="@+id/profile_picture"
-            android:text="Boba"
+            android:text="Вася"
+            style="@style/TextStyle"
             android:textSize="30dp" />
 
         <TextView

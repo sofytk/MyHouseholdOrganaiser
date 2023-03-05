@@ -1,4 +1,4 @@
-package com.example.myhouseholdorganaiser;
+package com.example.myhouseholdorganaiser.calendar;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;

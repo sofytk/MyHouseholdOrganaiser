@@ -1,6 +1,4 @@
-package com.example.myhouseholdorganaiser;
-
-import android.widget.TextView;
+package com.example.myhouseholdorganaiser.task;
 
 import java.io.Serializable;
 

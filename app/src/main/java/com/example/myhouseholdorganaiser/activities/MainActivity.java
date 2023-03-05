@@ -1,25 +1,28 @@
-package com.example.myhouseholdorganaiser;
+package com.example.myhouseholdorganaiser.activities;
 
 
-import static com.example.myhouseholdorganaiser.NewTask.tasksList;
+import static com.example.myhouseholdorganaiser.activities.NewTaskActivity.tasksList;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.RelativeLayout;
-import android.widget.Toast;
 
+import com.example.myhouseholdorganaiser.R;
+import com.example.myhouseholdorganaiser.calendar.MyCalendar;
+import com.example.myhouseholdorganaiser.calendar.MyCalendarAdapter;
+import com.example.myhouseholdorganaiser.calendar.myCalendarData;
 import com.example.myhouseholdorganaiser.databinding.ActivityMainBinding;
+import com.example.myhouseholdorganaiser.task.TasksAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.zip.Inflater;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -83,11 +86,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.new_task_button:
-                Intent intent = new Intent(MainActivity.this, NewTask.class);
+                Intent intent = new Intent(MainActivity.this, NewTaskActivity.class);
                 startActivity(intent);
-                break;
-            case R.id.registration:
-                finish();
                 break;
             case R.id.save:
                 finish();

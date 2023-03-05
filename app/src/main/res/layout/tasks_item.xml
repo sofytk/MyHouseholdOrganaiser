@@ -2,50 +2,55 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="150dp"
-    app:cardCornerRadius="90dp"
-    android:background="@drawable/task_style"
+    android:layout_height="wrap_content"
     android:layout_marginBottom="10dp"
-    >
+    android:padding="10dp"
+    android:id="@+id/task_item"
+    android:background="@drawable/task_style">
 
-   <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/task_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
-            android:text="Уберись дома"
-            android:textSize="20dp"
-            android:textStyle="bold" />
+    <TextView
+        android:id="@+id/task_name"
+        style="@style/TextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="16dp"
+        android:textSize="26dp"
+        android:layout_alignParentTop="true"
+        android:text="Убраться в комнате"
+        android:lineSpacingExtra="-6sp"
+        android:textColor="@color/text_welcom"
+        android:gravity="center_vertical" />
+    <View
+        android:layout_width="120dp"
+        android:layout_height="1dp"
+        android:id="@+id/line"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@id/task_name"
+        android:background="@android:color/black" />
+    <TextView
+        android:id="@+id/deadline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="до 12:00 24.03"
+        android:textSize="15dp"
+        android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/deadline"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/task_name"
-            android:layout_centerHorizontal="true"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
-            android:text="23.56.4332"
-            android:textSize="15dp"
-            android:textStyle="bold" />
-
-        <Switch
-            android:id="@+id/do_switch"
-            android:layout_width="61dp"
-            android:layout_height="57dp"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="30dp"
-            android:scaleX="1"
-            android:scaleY="1" />
-    </RelativeLayout>
+    <CheckBox
+        android:id="@+id/do_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="45dp"
+        android:scaleX="2"
+        android:scaleY="2" />
 </RelativeLayout>
