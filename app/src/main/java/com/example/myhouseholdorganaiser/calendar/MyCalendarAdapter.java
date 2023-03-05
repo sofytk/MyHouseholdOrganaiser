@@ -40,7 +40,7 @@ public class MyCalendarAdapter extends RecyclerView.Adapter<MyCalendarAdapter.My
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.data_item, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.date_item, parent, false);
         return new MyViewHolder(view);
     }
 

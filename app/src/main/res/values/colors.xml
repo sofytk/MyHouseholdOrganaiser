@@ -16,6 +16,6 @@
     <color name="text_title">#002B80</color>
     <color name="text_welcom">#131D3F</color>
     <color name="button_color">#5E5BEF</color>
-    <color name="background_color">#F3F3F3</color>
+    <color name="background_color">#F8F8F8</color>
     <color name="edittext_color">#E6E6E6</color>
 </resources>

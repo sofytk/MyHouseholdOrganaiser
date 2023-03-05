@@ -64,9 +64,9 @@ public class NewTaskActivity extends AppCompatActivity implements DatePickerDial
                     mDatePickerDialogFragment = new com.example.myhouseholdorganaiser.calendar.DatePicker();
                     mDatePickerDialogFragment.show(getSupportFragmentManager(), "DATE PICK");
                     break;
-                case R.id.new_task_button:
-                    finish();
-                    break;
+                //case R.id.new_task_button:
+                    //finish();
+                    //break;
                 case R.id.save:
                     task = new MyTask(binding.newTaskName.getText().toString(), binding.dateOfTask.getText().toString());
                     tasksList.add(task);

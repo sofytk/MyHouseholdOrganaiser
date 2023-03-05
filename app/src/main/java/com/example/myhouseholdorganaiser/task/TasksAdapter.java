@@ -3,7 +3,7 @@ package com.example.myhouseholdorganaiser.task;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Switch;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -32,14 +32,14 @@ public class TasksAdapter extends RecyclerView.Adapter<TasksAdapter.MyViewHolder
     public class MyViewHolder extends RecyclerView.ViewHolder {
         private TextView nameOfTask;
         private TextView deadline;
-        private Switch doingSwitch;
+        private CheckBox checkBox;
 
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             nameOfTask = itemView.findViewById(R.id.task_name);
             deadline = itemView.findViewById(R.id.deadline);
-            doingSwitch = itemView.findViewById(R.id.do_switch);
+            checkBox = itemView.findViewById(R.id.do_switch);
         }
     }
 
