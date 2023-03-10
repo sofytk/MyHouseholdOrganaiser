@@ -1,10 +1,17 @@
 package com.example.myhouseholdorganaiser.calendar;
 
 import android.annotation.SuppressLint;
+import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RelativeLayout;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.LinearLayout;
+import android.widget.RadioButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -27,13 +34,14 @@ public class MyCalendarAdapter extends RecyclerView.Adapter<MyCalendarAdapter.My
     public class MyViewHolder extends RecyclerView.ViewHolder {
         private TextView day;
         private TextView date;
-        private RelativeLayout parentRecycle;
+        private LinearLayout parent;
+        private CheckBox checkBox;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             date = itemView.findViewById(R.id.date);
             day = itemView.findViewById(R.id.day);
-            parentRecycle = itemView.findViewById(R.id.parent);
+            parent = itemView.findViewById(R.id.parent);
         }
     }
 
@@ -46,12 +54,30 @@ public class MyCalendarAdapter extends RecyclerView.Adapter<MyCalendarAdapter.My
 
     @SuppressLint("ResourceAsColor")
     @Override
-    public void onBindViewHolder(@NonNull MyCalendarAdapter.MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         MyCalendar calendar = myCalendar.get(position);
-        Calendar calendar1 = Calendar.getInstance();
+        Calendar calendarTime = Calendar.getInstance();
+       // boolean isChecked = false;
         holder.day.setText(calendar.getDay());
         holder.date.setText(calendar.getDate());
+        if (calendarTime.get(Calendar.DAY_OF_MONTH) == Integer.parseInt(calendar.getDay())){
+            holder.parent.setBackgroundResource(R.drawable.date_item_today_style);
+        }
+        Log.d("TTT", String.valueOf(holder.parent.getBackground()));
+        Log.d("TTT", String.valueOf(R.drawable.date_item_style));
+        holder.parent.setOnClickListener(view->{
+            Log.d("TTT", "checked");
+            Log.d("TTT", String.valueOf(holder.parent.getBackground().equals(R.drawable.date_item_checked_style)));
+            if(holder.parent.getBackground().equals(R.drawable.date_item_checked_style)){
+                holder.parent.setBackgroundResource(R.drawable.date_item_style);
+                Log.d("TTT", "checkedddd");
+            }
+            else{
+                holder.parent.setBackgroundResource(R.drawable.date_item_checked_style);
+            }
+        });
     }
+
 
     @Override
     public int getItemCount() {

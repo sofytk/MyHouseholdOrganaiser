@@ -42,9 +42,5 @@ public class myCalendarData {
         return this.startDay;
     }
 
-    public boolean isToday(){
-        if (startDay == Calendar.DAY_OF_MONTH) return true;
-        else return false;
-    }
 
 }
