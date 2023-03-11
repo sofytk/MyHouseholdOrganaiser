@@ -7,9 +7,11 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
@@ -33,7 +35,9 @@ import com.example.myhouseholdorganaiser.databinding.FragmentHomeBinding;
 import com.example.myhouseholdorganaiser.task.TasksAdapter;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 public class HomeFragment extends Fragment {
@@ -43,6 +47,7 @@ public class HomeFragment extends Fragment {
     //RecyclerView calendar;
     private MyCalendarAdapter calendarAdapter;
     private List<MyCalendar> calendarList = new ArrayList<>();
+    myCalendarData mCalendar = new myCalendarData(-2);
 
 
     private TasksAdapter tasksAdapter;
@@ -61,7 +66,7 @@ public class HomeFragment extends Fragment {
         prepareCalendarData();
         binding.calendar.getAdapter().notifyDataSetChanged();
 
-        binding.newTaskButton.setOnClickListener(view->{
+        binding.newTaskButton.setOnClickListener(view -> {
             Intent intent1 = new Intent(context, NewTaskActivity.class);
             startActivity(intent1);
         });
@@ -72,10 +77,14 @@ public class HomeFragment extends Fragment {
         binding.tasks.setAdapter(new TasksAdapter(tasksList));
         //  tasksList.add((MyTask) intent.getSerializableExtra("newTask"));
 
+        Calendar calendar = Calendar.getInstance();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("EEEE, d MMMM");
+        binding.todayText.setText(dateFormat.format(calendar.getTime()));
+
         return binding.getRoot();
     }
+
     private void prepareCalendarData() {
-        myCalendarData mCalendar = new myCalendarData(-2);
         for (int i = 0; i < 10; i++) {
             MyCalendar calendar = new MyCalendar(String.valueOf(mCalendar.getDay()), mCalendar.getWeekDay(), i);
             mCalendar.getNextWeekDay(1);

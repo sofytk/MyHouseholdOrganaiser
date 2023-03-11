@@ -4,7 +4,12 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     tools:context=".mainFragments.HomeFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
     <RelativeLayout
         android:id="@+id/parentRelative"
         android:layout_width="match_parent"
@@ -16,9 +21,12 @@
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/profile_picture"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_margin="10dp"
+            android:layout_width="100dp"
+            android:layout_height="110dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
             android:scaleType="centerCrop"
             android:src="@drawable/mum_img"
             app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Full" />
@@ -89,7 +97,7 @@
             android:layout_below="@+id/text3"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="9dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="10dp"
             android:layout_toRightOf="@+id/my_points"
             android:gravity="center_horizontal"
             android:text="заданий выполненно за последнюю неделю"
@@ -97,29 +105,43 @@
             android:textSize="10dp" />
     </RelativeLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/tasks"
-        android:layout_marginTop="230dp"
-        android:layout_width="match_parent"
-        android:layout_height="481dp"
-        android:layout_marginBottom="150dp"
-        android:layout_alignParentBottom="true" />
-
+    <TextView
+        android:id="@+id/today_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Вторник, 23 марта"
+        android:textSize="20dp"
+        android:fontFamily="@font/title_font"
+        android:textColor="@color/text_welcom"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="20dp"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/calendar"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="160dp" />
+        android:layout_height="60dp"
+        android:layout_marginTop="5dp" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tasks"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:layout_gravity="center"
+        android:layout_alignParentBottom="true" />
+
+    </LinearLayout>
     <ImageButton
         android:id="@+id/new_task_button"
         android:layout_width="55dp"
         android:layout_height="55dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="80dp"
+
+        android:layout_marginTop="10dp"
+        android:translationZ="10dp"
         android:layout_marginRight="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
         android:src="@drawable/plus"
         android:background="@drawable/any_style"
         android:backgroundTint="#9AB2E1"

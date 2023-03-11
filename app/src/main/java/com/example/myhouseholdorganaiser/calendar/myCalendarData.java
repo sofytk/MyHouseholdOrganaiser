@@ -7,7 +7,7 @@ import java.util.List;
 
 public class myCalendarData {
 
-    private final Calendar calendar;
+    private final Calendar calendar = Calendar.getInstance();
 
     private int startDay;
     private int dayOfWeek;
@@ -16,7 +16,6 @@ public class myCalendarData {
     private SimpleDateFormat dateFormat = new SimpleDateFormat("EEE");
 
     public  myCalendarData (int start){
-        this.calendar = Calendar.getInstance();
         calendar.add(Calendar.DATE, start);
         setThis();
     }
@@ -41,6 +40,5 @@ public class myCalendarData {
     public int getDay(){
         return this.startDay;
     }
-
 
 }

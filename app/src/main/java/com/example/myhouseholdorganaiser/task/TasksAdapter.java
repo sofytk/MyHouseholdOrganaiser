@@ -57,13 +57,8 @@ public class TasksAdapter extends RecyclerView.Adapter<TasksAdapter.MyViewHolder
         MyTask task = myTasks.get(position);
         holder.nameOfTask.setText(task.getNameOfTask());
         holder.deadline.setText(task.getDeadline());
-        holder.checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
-                    holder.relativeLayout.setBackgroundColor(R.color.light_blue_600);
-                }
-            }
+        holder.checkBox.setOnCheckedChangeListener((buttonView, isChecked) -> {
+           
         });
     }
 

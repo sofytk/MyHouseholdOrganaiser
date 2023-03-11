@@ -10,7 +10,8 @@
     <FrameLayout
         android:id="@+id/mainPlaceHolder"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_marginBottom="70dp"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/my_toolbar"
