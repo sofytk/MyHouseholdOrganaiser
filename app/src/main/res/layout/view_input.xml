@@ -13,6 +13,6 @@
         android:padding="15dp"
         android:layout_marginBottom="20dp"
         android:selectAllOnFocus="true"
-        android:textColor="@color/text_title"
+        android:textColor="@color/black"
         android:textSize="18dp" />
 </RelativeLayout>
