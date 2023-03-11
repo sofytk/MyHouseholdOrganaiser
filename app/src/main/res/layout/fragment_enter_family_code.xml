@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context=".registrationFragments.EnterFamilyCodeFragment">
+
+    <ImageView
+        android:layout_width="199dp"
+        android:layout_height="171dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="-37dp"
+        android:src="@drawable/background_elements" />
+
+    <ImageView
+        android:layout_width="186dp"
+        android:layout_height="161dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-37dp"
+        android:layout_marginEnd="-41dp"
+        android:layout_marginBottom="-10dp"
+        android:src="@drawable/background_elements2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="120dp"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/TextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="49dp"
+            android:layout_gravity="center_horizontal"
+            android:text="Введите индивидуальный код семьи"
+            android:textSize="23dp"
+            android:layout_marginTop="20dp"
+            android:translationY="-5.38sp" />
+
+        <ImageView
+            android:layout_width="268dp"
+            android:layout_height="247dp"
+            android:layout_marginTop="-15dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/enter_code_img" />
+
+        <com.example.myhouseholdorganaiser.view.InputView
+            android:id="@+id/family_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:inputType="textEmailAddress"
+            app:hint="Введите код" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="30dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="5dp"
+                android:fontFamily="@font/title_font"
+                android:gravity="center"
+                android:text="Нет кода?"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/new_code_button"
+                style="@style/TextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:text="Создать код семьи"
+                android:textColor="#244AD0"
+                android:textSize="20dp" />
+        </LinearLayout>
+
+        <com.example.myhouseholdorganaiser.view.MyButton
+            android:id="@+id/new_family_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:elevation="4dp"
+            android:translationZ="5dp"
+            app:text="Присоединиться" />
+    </LinearLayout>
+
+
+</RelativeLayout>

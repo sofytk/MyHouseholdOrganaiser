@@ -117,7 +117,7 @@
                 android:orientation="vertical">
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/role_img"
+                    android:id="@+id/role_son"
                     android:layout_width="137dp"
                     android:layout_height="129dp"
                     android:background="@drawable/son_img" />
