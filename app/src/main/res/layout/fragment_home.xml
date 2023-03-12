@@ -136,14 +136,12 @@
         android:id="@+id/new_task_button"
         android:layout_width="55dp"
         android:layout_height="55dp"
-
-        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         android:translationZ="10dp"
         android:layout_marginRight="20dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:src="@drawable/plus"
         android:background="@drawable/any_style"
-        android:backgroundTint="#9AB2E1"
-        />
+        android:src="@drawable/plus"
+        android:backgroundTint="#9AB2E1" />
 </RelativeLayout>
