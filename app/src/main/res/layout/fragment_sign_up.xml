@@ -41,7 +41,7 @@
             android:translationY="-5.38sp" />
 
         <com.example.myhouseholdorganaiser.view.InputView
-            android:id="@+id/name"
+            android:id="@+id/user_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -49,6 +49,7 @@
             app:hint="Введите имя" />
 
         <com.example.myhouseholdorganaiser.view.InputView
+            android:id="@+id/email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -56,6 +57,7 @@
             app:hint="Введите почту" />
 
         <com.example.myhouseholdorganaiser.view.InputView
+            android:id="@+id/password"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -63,6 +65,7 @@
             app:hint="Введите пароль" />
 
         <com.example.myhouseholdorganaiser.view.InputView
+            android:id="@+id/password_repeat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"

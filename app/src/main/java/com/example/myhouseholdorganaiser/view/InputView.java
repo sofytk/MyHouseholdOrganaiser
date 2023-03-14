@@ -45,4 +45,7 @@ public class InputView extends LinearLayout {
             attributes.recycle();
         }
     }
+    public String getText(){
+        return binding.edittextField.getText().toString();
+    }
 }

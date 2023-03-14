@@ -23,7 +23,6 @@ import com.example.myhouseholdorganaiser.R;
 import com.example.myhouseholdorganaiser.activities.MainActivity;
 import com.example.myhouseholdorganaiser.activities.RegistationActivity;
 import com.example.myhouseholdorganaiser.databinding.FragmentSignInBinding;
-import com.example.myhouseholdorganaiser.databinding.FragmentSignUpBinding;
 
 public class SignInFragment extends Fragment {
 
